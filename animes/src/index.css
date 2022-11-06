@@ -113,3 +113,14 @@ body{
   padding: 1rem;
   overflow: auto;
 }
+
+.minhalista{
+  position: absolute;
+  bottom: 20px;
+  right: 50px;
+  padding: 0.5rem;
+  background-color: rgb(33, 57, 68);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
