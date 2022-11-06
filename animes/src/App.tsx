@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { AnimeInfo } from './components/AnimeInfo';
 import { ListaAnime } from "./components/ListaAnime";
 import { AddMyLista } from "./components/AddMyLista";
+import { RemoveDaLista } from './components/RemoveDaLista';
 
 function App() {
 
@@ -10,8 +11,20 @@ function App() {
   const [animeInfo, setAnimeInfo] = useState();
   const [minhaLista, setMinhaLista] = useState([]);
 
-  const addA=(anime)=>{
-    const newArray = [...minhaLista, anime]
+  const addA = (anime) => {
+    const index = minhaLista.findIndex((myanime) => {
+      return myanime.mal_id === anime.mal_id
+    })
+    if (index < 0) {
+      const newArray = [...minhaLista, anime]
+      setMinhaLista(newArray);
+    }
+  }
+
+  const removeDa = (anime) => {
+    const newArray = minhaLista.filter((myanime) => {
+      return myanime.mal_id !== anime.mal_id
+    })
     setMinhaLista(newArray);
   }
 
@@ -45,16 +58,16 @@ function App() {
             <ListaAnime listaanime={dadosAnime}
               setAnimeInfo={setAnimeInfo}
               animeComponent={AddMyLista}
-              naLista={(anime)=>addA(anime)}
+              naLista={(anime) => addA(anime)}
             />
           </div>
           <h2 className="titulo">Minha lista</h2>
           <div className="fila">
-            <ListaAnime 
+            <ListaAnime
               listaanime={minhaLista}
               setAnimeInfo={setAnimeInfo}
-              animeComponent={AddMyLista}
-              naLista={(anime)=>addA(anime)}
+              animeComponent={RemoveDaLista}
+              naLista={(anime) => removeDa(anime)}
             />
           </div>
         </div>
