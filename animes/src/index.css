@@ -30,3 +30,51 @@ body{
   font-weight: bold;
   padding: 0 1rem;
 }
+
+.container{
+  width: 100%;
+  margin: 100px auto;
+  display: flex;
+  color: #f7f7f7;
+}
+
+.animeinfo{
+  width: 320px;
+  height: 100%;
+  background-color: #213944;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 11;
+}
+
+.fila-anime{
+  display: flex;
+  flex-direction: column;
+}
+
+.fila-anime .fila{
+  display: inline-flex;
+  gap: 20px;
+  margin-right: 20rem;
+}
+
+.fila-anime .titulo{
+  margin-right: 20rem;
+  margin-top: 1rem;
+}
+
+.card{
+  width: 230px;
+  height: 300px;
+  padding: 0 0 1rem 0;
+  box-shadow: 5px 5px 5px rgba(27, 27, 27, 0.3);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.card img{
+  width: 100%;
+  height: 80%;
+}

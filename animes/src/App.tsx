@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import {ListaAnime} from "./components/ListaAnime";
 
 function App() {
   
@@ -22,6 +23,18 @@ function App() {
         <div className="pesquisa">
           <input type="search" placeholder='Buscar...' 
           onChange={(e)=>setPesquisa(e.target.value)}/>
+        </div>
+      </div>
+
+      <div className="container">
+        <div className="animeinfo">
+
+        </div>
+        <div className="fila-anime">
+          <h2 className="titulo">Animes</h2>
+          <div className="fila">
+            <ListaAnime listaanime={dadosAnime}/>
+          </div>
         </div>
       </div>
     </>
