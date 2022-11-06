@@ -5,6 +5,7 @@ function App() {
   
   const [pesquisa, setPesquisa] = useState('Naruto');
   const [dadosAnime, setDadosAnime] = useState();
+  const [animeInfo, setAnimeInfo] = useState();
 
   const getData = async () => {
     const resp = await fetch(`https://api.jikan.moe/v4/anime?q=${pesquisa}&limit=21`);
