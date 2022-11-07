@@ -6,7 +6,7 @@ import { RemoveDaLista } from './components/RemoveDaLista';
 
 function App() {
 
-  const [pesquisa, setPesquisa] = useState('Naruto');
+  const [pesquisa, setPesquisa] = useState('');
   const [dadosAnime, setDadosAnime] = useState();
   const [animeInfo, setAnimeInfo] = useState();
   const [minhaLista, setMinhaLista] = useState([]);
@@ -29,7 +29,7 @@ function App() {
   }
 
   const getData = async () => {
-    const resp = await fetch(`https://api.jikan.moe/v4/anime?q=${pesquisa}&limit=21`);
+    const resp = await fetch(`https://api.jikan.moe/v4/anime?q=${pesquisa}&limit=24`);
     const respData = await resp.json();
     setDadosAnime(respData.data);
   }
@@ -61,6 +61,8 @@ function App() {
               naLista={(anime) => addA(anime)}
             />
           </div>
+
+          <hr color='#f47521'/><hr color='#f47521'/>
           <h2 className="titulo">Minha lista</h2>
           <div className="fila">
             <ListaAnime

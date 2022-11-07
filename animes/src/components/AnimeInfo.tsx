@@ -4,6 +4,7 @@ export const AnimeInfo = (props) => {
     const {title, images:{jpg:{large_image_url}}, source, rank, score, popularity, members, status, rating, duration} = props.animeInfo;
   return (
     <>
+        <div className="visivel">
         <div className="anime-contido">
             <h3>{title}</h3><br />
             <img src={large_image_url} alt="" /><br /><br />
@@ -17,6 +18,7 @@ export const AnimeInfo = (props) => {
                 <h4>Status: {status}</h4>
                 <h4>Avaliação: {rating}</h4>
             </div>
+        </div>
         </div>
     </>
   )

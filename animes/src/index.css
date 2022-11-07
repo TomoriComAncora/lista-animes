@@ -38,10 +38,10 @@ body{
   color: #f7f7f7;
 }
 
-.animeinfo{
+.visivel{
   width: 320px;
   height: 100%;
-  background-color: #213944;
+  background-color: rgba(33, 57, 68, 0.9);
   position: fixed;
   right: 0;
   top: 0;
