@@ -124,3 +124,17 @@ body{
   font-weight: bold;
   cursor: pointer;
 }
+
+.pesquisa{
+  position: relative;
+  display: inherit;
+}
+
+.icon{
+  position: absolute;
+  right: 6px;
+  top: 5px;
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}

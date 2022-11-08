@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+//componente que fica a lista com os animes.
 export const ListaAnime = ({ listaanime, setAnimeInfo, animeComponent, naLista}) => {
     const AddALista = animeComponent;
     return (
