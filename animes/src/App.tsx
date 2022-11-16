@@ -63,7 +63,8 @@ function App() {
           <h2 className="titulo">Animes</h2>
           <div className="fila">
             {/* adicionando na "minha lista" */}
-            <ListaAnime listaanime={dadosAnime}
+            <ListaAnime 
+              listaanime={dadosAnime}
               setAnimeInfo={setAnimeInfo}
               animeComponent={AddMyLista}
               naLista={(anime) => addA(anime)}
