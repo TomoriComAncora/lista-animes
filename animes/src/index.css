@@ -46,6 +46,7 @@ body{
   right: 0;
   top: 0;
   z-index: 11;
+  overflow: auto;
 }
 
 .fila-anime{
